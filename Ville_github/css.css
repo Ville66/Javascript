@@ -1,0 +1,158 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Exo 2', sans-serif;
+    background-color: #040404;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+}
+
+.logo {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.container {
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 800px;
+    animation: fadeIn 0.5s ease;
+    background-color: #121212;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+p {
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input[type="number"],
+select {
+    width: calc(100% - 22px);
+    padding: 15px;
+    margin-bottom: 30px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+    background-color: #222;
+    color: #fff;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: #aaa;
+}
+
+button {
+    background-color: #0cbaba;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: #09a8a8;
+}
+
+#tulos {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+.image-container {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 200px;
+    z-index: 999;
+}
+
+#popup-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+}
+  
+.chat-bubble {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 160px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
+    /* Position off the screen initially */
+    bottom: 10px;
+    /* Apply the transition to the left attribute */
+  }
+  
+  .chat-bubble::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #ffffff transparent transparent;
+    /* Set the color of the chat bubble pointer */
+    left: -20px;
+    /* Position the chat bubble pointer */
+    bottom: 10px;
+    /* Position the chat bubble pointer at the bottom */
+  }
+
+  /* Scrollbar Styles */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #0cbaba;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #121212;
+}

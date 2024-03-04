@@ -77,3 +77,16 @@ function jarjestaNumerot() {
               tulosKentta.innerHTML = "Hej världen!";
             }
           }
+
+          document.getElementById("chat-bubble").style.display = "none";
+
+          setTimeout(function () {
+              document.getElementById("chat-bubble").style.display = "block";
+              document.getElementById("chat-bubble").style.left = "0";
+          }, 7500);
+      
+          document.getElementById("popup-image").addEventListener("click", function () {
+              document.getElementById("chat-bubble").style.display = "block";
+          });
+
+
